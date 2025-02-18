@@ -1,2 +1,4 @@
 myenv/
 python_code/dataset/.env
+
+*.env
