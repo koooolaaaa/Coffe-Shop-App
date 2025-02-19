@@ -1,16 +1,30 @@
-from agents import (GuardAgent, ClassificationAgent, DetailsAgent, AgentProtocol)
+from agents import (GuardAgent, ClassificationAgent, DetailsAgent, AgentProtocol, RecommendationAgent)
 from typing import Dict
 import os 
+import sys
+import pathlib 
+folder_path = pathlib.Path(__file__).parent.resolve()
 
 def main():
     pass
 
 if __name__ == "__main__":
+    # recommendation_agent = RecommendationAgent(
+    #     os.path.join(folder_path, 'recommendation_objects/apriori_recommendations.json'),
+    #     os.path.join(folder_path, 'recommendation_objects/popularity_recommendation.csv')
+    # )
+
+    # print(recommendation_agent.get_apriori_recommendations(['Latte']))
+    
     guard_agent = GuardAgent()
     classification_agent = ClassificationAgent()
     
     agent_dict: Dict[str, AgentProtocol] = {
-        "details_agent": DetailsAgent()
+        "details_agent": DetailsAgent(),
+        "recommendation_agent": RecommendationAgent(
+                                    os.path.join(folder_path, 'recommendation_objects/apriori_recommendations.json'),
+                                    os.path.join(folder_path, 'recommendation_objects/popularity_recommendation.csv')
+                                )
     }
 
     messages = []
