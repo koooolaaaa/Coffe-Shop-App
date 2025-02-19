@@ -26,8 +26,32 @@ class ClassificationAgent():
 
             Your output should be in a structured json format like so. each key is a string and each value is a string. Make sure to follow the format exactly:
             {
-            "chain of thought": go over each of the agents above and write some your thoughts about what agent is this input relevant to.
-            "decision": "details_agent" or "order_taking_agent" or "recommendation_agent". Pick one of those. and only write the word.
-            "message": leave the message empty.
+            "chain of thought": "go over each of the agents above and write some your thoughts about what agent is this input relevant to.",
+            "decision": "details_agent" or "order_taking_agent" or "recommendation_agent". Pick one of those. and only write the word.,
+            "message": leave the message empty
             }
         """
+
+        input_messages = [
+            {"role": 'system', 'content':system_prompt}
+        ]
+        input_messages += messages[-3:]
+
+        chatbot_output = get_chatbot_response(self.client, self.model_name, input_messages)
+        output = self.postprocess(chatbot_output)
+
+        return output
+
+    def postprocess(self, output):
+        output = json.loads(output)
+
+        dict_output = {
+            "role": 'assistant', 
+            "content": output['message'],
+            "memory": {
+                "agent": "classification_agent", 
+                "classification_decision": output['decision']
+            }
+        }
+
+        return dict_output

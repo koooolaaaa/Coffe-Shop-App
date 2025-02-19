@@ -1,4 +1,4 @@
-from agents import (GuardAgent)
+from agents import (GuardAgent, ClassificationAgent)
 import os 
 
 def main():
@@ -6,10 +6,11 @@ def main():
 
 if __name__ == "__main__":
     guard_agent = GuardAgent()
+    classification_agent = ClassificationAgent()
 
     messages = []
     while True:
-        os.system('cls' if os.name == 'nt' else 'clear')
+        #os.system('cls' if os.name == 'nt' else 'clear')
 
         print("\n\n Print Messages ...........")
         for message in messages: 
@@ -26,4 +27,6 @@ if __name__ == "__main__":
             continue
         
         # Get Classification Agent's response 
-        
+        classification_agent_response = classification_agent.get_response(messages)
+        chosen_agent = classification_agent_response["memory"]["classification_decision"]
+        print("Chosen Agent: ", chosen_agent)
