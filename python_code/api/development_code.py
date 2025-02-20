@@ -19,6 +19,7 @@ def main():
 
     messages = []
     while True:
+        # Flush Output
         #os.system('cls' if os.name == 'nt' else 'clear')
 
         print("\n\n Print Messages ...........")
