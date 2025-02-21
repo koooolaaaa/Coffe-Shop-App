@@ -1,4 +1,4 @@
-from agents import (GuardAgent, ClassificationAgent, DetailsAgent, AgentProtocol, RecommendationAgent)
+from agents import (GuardAgent, ClassificationAgent, DetailsAgent, AgentProtocol, RecommendationAgent, OrderTakingAgent)
 from typing import Dict
 import os 
 import sys
@@ -14,7 +14,8 @@ def main():
         "recommendation_agent": RecommendationAgent(
                                     os.path.join(folder_path, 'recommendation_objects/apriori_recommendations.json'),
                                     os.path.join(folder_path, 'recommendation_objects/popularity_recommendation.csv')
-                                )
+                                ),
+        "order_taking_agent": OrderTakingAgent()
     }
 
     messages = []
@@ -45,6 +46,7 @@ def main():
         # Get the chosen agent's response 
         agent = agent_dict[chosen_agent]
         response = agent.get_response(messages)
+        print("Agent output: ", response)
 
         messages.append(response)
 
