@@ -106,7 +106,7 @@ class OrderTakingAgent():
         if type(output['order']) == str:
             output['order'] = json.loads(output['order'])
 
-        response = output["response"]
+        response = output['response']
 
         if not asked_recommendation_before and len(output["order"]) > 0:
             recommendation_output = self.recommendation_agent.get_recommendations_from_order(messages, output["order"])

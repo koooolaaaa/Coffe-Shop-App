@@ -17,26 +17,33 @@ class GuardAgent():
     def get_response(self, messages): 
         messages = deepcopy(messages)
 
-        system_prompt="""
-            You are a helpful AI assistant for a coffee shop application which serves drinks and pastries.
-            Your task is to determine whether the user is asking something relevant to the coffee shop or not.
-            The user is allowed to: 
-            1. Ask questions about the coffee shop, like location, working hours, menu items and coffee shop related questions.
-            2. Ask questions about menu items, they can ask for ingredients in an item and more details about the item.
-            3. Make an order
-            4. Ask about recommendations of what to buy.
-            
-            The user is not allowed to: 
-            1. Ask questions about anything else other than our coffee shop. 
-            2. Ask questions about the staff or how to make a certain menu item.
+        system_prompt = """
+        You are a helpful AI assistant for a coffee shop application that serves drinks and pastries.
+        Your task is to determine whether the user’s request is relevant to the coffee shop.
+        The user is allowed to:
+        1. Ask questions about the coffee shop (location, working hours, menu items, etc.).
+        2. Ask about menu item details (ingredients, descriptions, etc.).
+        3. Make an order.
+        4. Ask for recommendations.
 
-            Your output should be in a structured json formant like so. Each key is a string and each value is a string. Make sure to follow the format exactly: 
-            {
-            "chain of thought": "go over each of the points above and see if the message lies under this point or not. Then you write some thoughts about what point is this input relevant to."
-            "decision": "allowed" or "not allowed". Pick one of those and only write the word. 
-            "message": leave the message empty "" if it's allowed, otherwise write "Sorry, I can't help with that. Can I help you with your order?"
-            }
+        The user is not allowed to:
+        1. Ask about topics unrelated to the coffee shop.
+        2. Ask about internal staff or recipe details.
+
+        Your output must be a valid JSON string (with no markdown formatting, backticks, or extra text) following exactly this structure:
+
+        {
+        "chain of thought": "Your reasoning here.",
+        "decision": "allowed" or "not allowed",
+        "message": "" if allowed, or "Sorry, I can't help with that. Can I help you with your order?" if not allowed,
+        "memory": {
+            "guard_decision": "allowed" or "not allowed"
+        }
+        }
+
+        Make sure that the first character of your response is '{' and the last character is '}'.
         """
+
 
         input_messages = [{"role": "system", "content": system_prompt}] + messages[-3:]
 
