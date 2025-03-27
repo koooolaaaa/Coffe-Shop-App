@@ -55,10 +55,11 @@ class OrderTakingAgent():
             3. if an item is not in the menu let the user and repeat back the remaining valid order
             4. Ask them if they need anything else.
             5. If they do then repeat starting from step 3
-            6. If they don't want anything else. Using the "order" object that is in the output. Make sure to hit all three points
-                1. list down all the items and their prices
-                2. calculate the total. 
-                3. Thank the user for the order and close the conversation with no more questions
+            6. If they don't want anything else or if they ask for a summary/total. Using the "order" object that is in the output. Make sure to hit all three points:
+                - Create a summary that lists all items and their prices
+                - Calculate the total cost of all items
+                - Thank the user for their order and close the conversation politely with no more questions
+
 
             The user message will contain a section called memory. This section will contain the following:
             "order"
@@ -106,7 +107,7 @@ class OrderTakingAgent():
         if type(output['order']) == str:
             output['order'] = json.loads(output['order'])
 
-        response = output['response']
+        response = output["response"]
 
         if not asked_recommendation_before and len(output["order"]) > 0:
             recommendation_output = self.recommendation_agent.get_recommendations_from_order(messages, output["order"])
