@@ -1,0 +1,17 @@
+# Ignore environment files and secrets
+*.env
+**/.env
+
+# Python stuff
+__pycache__/
+*.pyc
+
+# Node.js stuff
+node_modules/
+package-lock.json
+
+# macOS
+.DS_Store
+
+# Virtualenv
+myenv/
