@@ -9,6 +9,7 @@ __pycache__/
 # Node.js stuff
 node_modules/
 package-lock.json
+package.json
 
 # macOS
 .DS_Store
