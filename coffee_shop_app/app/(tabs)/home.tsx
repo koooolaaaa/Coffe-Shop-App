@@ -8,8 +8,13 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import SearchArea from '@/components/SearchArea';
 import Banner from '@/components/Banner';
 import { router } from 'expo-router';
+import { useCart } from '@/components/CartContext';
+import Toast from 'react-native-root-toast';
 
 const Home = () => {
+
+  const {addToCart, cartItems} = useCart();
+
   const [products, setProducts] = useState<Product[]>([]);
   const [productCategories, setProductCategories] = useState<ProductCategory[]>([]);
   const [shownProducts, setShownProducts] = useState<Product[]>([]);
@@ -62,6 +67,13 @@ const Home = () => {
   }, [])
 
   if (loading) return <Text>Loading...</Text>;
+
+  const addButton = (name: string) => {
+    addToCart(name, 1);
+    Toast.show(`${name} added to cart`, {
+      duration: Toast.durations.SHORT,
+    });
+  };
 
   return (
     <GestureHandlerRootView>
@@ -119,7 +131,9 @@ const Home = () => {
                   ${item.price}
                 </Text>
 
-                <TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => addButton(item.name)}
+                >
                   <View
                     className='mr-2 p-2 -mt-1 bg-app-orange rounded-xl'
                   >
