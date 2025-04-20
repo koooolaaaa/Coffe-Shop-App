@@ -9,14 +9,22 @@ NativeWindStyleSheet.setOutput({
 
 export default function RootLayout() {
   const [fontsLoaded] = useFonts({
-    "Sora-Regular": require("../assets/fonts/Sora-Regular.ttf"),
-    "Sora-Semibold": require("../assets/fonts/Sora-SemiBold.ttf"),
-    "Sora-Bold": require("../assets/fonts/Sora-Bold.ttf"),
+    "Sora-Regular": require("@/assets/fonts/Sora-Regular.ttf"),
+    "Sora-Semibold": require("@/assets/fonts/Sora-SemiBold.ttf"),
+    "Sora-Bold": require("@/assets/fonts/Sora-Bold.ttf"),
   })
+
+  if (!fontsLoaded) {
+    return undefined;
+  }
+
   return (
     <Stack>
       <Stack.Screen name="index"
         options={{headerShown: false}}
+      />
+      <Stack.Screen name="details"
+        options={{headerShown: true}}
       />
       <Stack.Screen name="(tabs)"
       options={{headerShown: false}}

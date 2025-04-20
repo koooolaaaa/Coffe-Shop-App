@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@react-native-firebase/app": "^21.14.0",
+    "@react-native-firebase/firestore": "^21.14.0"
+  }
+}
