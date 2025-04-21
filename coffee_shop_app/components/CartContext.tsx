@@ -8,7 +8,7 @@ type CartItems = {
 interface CartContextType {
     cartItems: CartItems;
     addToCart: (itemKey: string, quantity: number) => void;
-    SetQuantityCart: (itemKey: string, delta: number) => void;
+    setQuantityCart: (itemKey: string, delta: number) => void;
     emptyCart: () => void;
 }
 
@@ -19,7 +19,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export const CartProvider = ({ children }: { children: ReactNode }) => {
     const [cartItems, setCartItems] = useState<CartItems>({});
 
-    const SetQuantityCart = (itemKey: string, delta: number) => {
+    const setQuantityCart = (itemKey: string, delta: number) => {
         setCartItems((prevItems) => ({
         ...prevItems,
         [itemKey]:  Math.max((prevItems[itemKey] || 0) + delta, 0),
@@ -40,7 +40,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     };
 
     return (
-        <CartContext.Provider value={{ cartItems, addToCart, emptyCart ,SetQuantityCart }}>
+        <CartContext.Provider value={{ cartItems, addToCart, emptyCart ,setQuantityCart }}>
         {children}
         </CartContext.Provider>
     );
