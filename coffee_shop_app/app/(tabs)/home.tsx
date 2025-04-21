@@ -96,6 +96,7 @@ const Home = () => {
                   router.push({
                     pathname: '/details', params: {
                       name: item.name, 
+                      image_url: item.image_url,
                       type: item.category, 
                       price: item.price, 
                       rating: item.rating, 
