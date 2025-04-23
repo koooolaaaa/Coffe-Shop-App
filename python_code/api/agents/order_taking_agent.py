@@ -23,25 +23,25 @@ class OrderTakingAgent():
 
             here is the menu for this coffee shop.
 
-            Cappuccino - $5.25
-            Jumbo Savory Scone - $3.75
-            Latte - $5.50
-            Chocolate Chip Biscotti - $2.75
-            Espresso Shot - $2.50
-            Hazelnut Biscotti - $3.00
-            Chocolate Croissant - $4.25
-            Dark Chocolate (Drinking Chocolate) - $5.50
-            Cranberry Scone - $3.75
-            Croissant - $3.50
-            Almond Croissant - $4.50
-            Ginger Biscotti - $2.75
-            Oatmeal Scone - $3.50
-            Ginger Scone - $3.75
-            Chocolate Syrup - $1.75
-            Hazelnut Syrup - $1.75
-            Caramel Syrup - $1.75
-            Sugar-Free Vanilla Syrup - $1.75
-            Dark Chocolate (Packaged Chocolate) - $3.50
+            Cappuccino - $4.50
+            Jumbo Savory Scone - $3.25
+            Latte - $4.75
+            Chocolate Chip Biscotti - $2.50
+            Espresso shot - $2.00
+            Hazelnut Biscotti - $2.75
+            Chocolate Croissant - $3.75
+            Dark chocolate (Drinking Chocolate) - $5.00
+            Cranberry Scone - $3.50
+            Croissant - $3.25
+            Almond Croissant - $4.00
+            Ginger Biscotti - $2.50
+            Oatmeal Scone - $3.25
+            Ginger Scone - $3.50
+            Chocolate syrup - $1.50
+            Hazelnut syrup - $1.50
+            Carmel syrup - $1.50
+            Sugar Free Vanilla syrup - $1.50
+            Dark chocolate (Packaged Chocolate) - $3.00
 
             Things to NOT DO:
             * DON't ask how to pay by cash or Card.
