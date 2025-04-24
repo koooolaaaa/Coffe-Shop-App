@@ -75,8 +75,8 @@ RUNPOD_EMBEDDING_URL=`<your_embedding_endpoint>`
 - Sign up: [Pinecone](https://www.pinecone.io/)
 
 - Add to .env:
-<pre><code>`PINECONE_API_KEY=<your_pinecone_api_key>`
-  PINECONE_INDEX_NAME=`<your_index_name>`
+<pre><code>\`PINECONE_API_KEY=\<your_pinecone_api_key\>\`
+\`PINECONE_INDEX_NAME=\<your_pinecone_index_name\>\`
 </code></pre>
 
 ### 6. 🔥 Set Up Firebase
