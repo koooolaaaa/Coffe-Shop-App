@@ -33,7 +33,7 @@ This project was super hands-on and I learned a ton, including how to:
 
 The chatbot uses a **modular agent-based architecture**. Each agent has a specific role, which keeps the system clean, scalable, and easy to maintain.
 
-![Chatbot Agent Architecture](images/chatbot_agent_architecture.png)
+![Chatbot Agent Architecture](images/chatbot_agent_architecture.jpg)
 
 ### 🤖 Agents:
 
