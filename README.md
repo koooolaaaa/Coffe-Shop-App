@@ -33,7 +33,7 @@ This project was super hands-on and I learned a ton, including how to:
 
 The chatbot uses a **modular agent-based architecture**. Each agent has a specific role, which keeps the system clean, scalable, and easy to maintain.
 
-![Chatbot Agent Architecture](../images/chatbot_agent_architecture.png)
+![Chatbot Agent Architecture](images/chatbot_agent_architecture.png)
 
 ### 🤖 Agents:
 
@@ -64,7 +64,7 @@ Here’s how the agents work together:
 
 The React Native app is the front-end where users interact with the chatbot:
 
-![React Native Coffee Shop App](../images/mobile_app.png)
+![React Native Coffee Shop App](images/mobile_app.png)
 
 - **Landing Page**: Welcoming start to the experience.
 - **Home Page**: Featured items and categories.
