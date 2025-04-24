@@ -6,8 +6,7 @@ This folder contains the Python code and Jupyter notebooks required to build and
 
 ## 📂 Directory Structure
 
-<pre><code>
-|   ├── python_code
+<pre><code>|   ├── python_code
 │   ├── API/               # Chatbot API for agent-based system
 │   ├── dataset/           # Dataset for training recommendation engine    
 │   ├── products/          # Product data (names, prices, descriptions, images)   
@@ -15,9 +14,6 @@ This folder contains the Python code and Jupyter notebooks required to build and
 │   ├── firebase_uploader.ipynb                 # Uploads products to Firebase    
 │   ├── recommendation_engine_training.ipynb    # Trains recommendation engine 
 </pre></code>
-
----
-
 
 ---
 
@@ -50,8 +46,7 @@ You can follow along with my full setup in this YouTube tutorial (📺 *link com
 ---
 
 ### 1. 📦 Install Requirements
-<pre><code>
-  pip install -r requirements.txt
+<pre><code>pip install -r requirements.txt
 </code></pre>
 
 ### 2. 🤗 Set Up Hugging Face
@@ -61,9 +56,8 @@ You can follow along with my full setup in this YouTube tutorial (📺 *link com
 
 ### 3. ⚙️ Create .env File
 - Create a .env file in the python_code/ directory and populate it like so:
-<pre><code>
-  MODEL_NAME=meta-llama/Meta-Llama-3-8B-Instruct
-  HUGGINGFACE_TOKEN=<your_huggingface_token>
+<pre><code>MODEL_NAME=meta-llama/Meta-Llama-3-8B-Instruct
+  HUGGINGFACE_TOKEN=\<your_huggingface_token\>
 </code></pre>
 
 ### 4. 🚀 Set Up RunPod
@@ -72,23 +66,21 @@ You can follow along with my full setup in this YouTube tutorial (📺 *link com
   - A Chatbot endpoint (for LLM inference)
   - An Embedding endpoint (for vector DB)
 - Then add to .env:
-<pre><code>
-  RUNPOD_TOKEN=<your_runpod_token>
-  RUNPOD_CHATBOT_URL=<your_chatbot_endpoint>
-  RUNPOD_EMBEDDING_URL=<your_embedding_endpoint>
+<pre><code>RUNPOD_TOKEN=\<your_runpod_token\>
+  RUNPOD_CHATBOT_URL=\<your_chatbot_endpoint\>
+  RUNPOD_EMBEDDING_URL=\<your_embedding_endpoint\>
 </code></pre>
 
 ### 5. 🌲 Set Up Pinecone
-- Sign up: https://www.pinecone.io/start/
+- Sign up: [Pinecone](https://www.pinecone.io/)
 
 - Add to .env:
-<pre><code>
-  PINECONE_API_KEY=<your_pinecone_api_key>
-  PINECONE_INDEX_NAME=<your_index_name>
+<pre><code>PINECONE_API_KEY=\<your_pinecone_api_key\>
+  PINECONE_INDEX_NAME=\<your_index_name\>
 </code></pre>
 
 ### 6. 🔥 Set Up Firebase
-- Sign up: https://firebase.google.com/
+- Sign up: [Firebase](https://firebase.google.com/)
 - Create a project and download the credentials file.
 - Save the credentials JSON file and load it in your scripts
 - Or paste key fields into your .env (for lightweight storage)
@@ -98,6 +90,7 @@ Now you’re ready to go!
 - build_vector_database.ipynb → Build your semantic search DB
 - recommendation_engine_training.ipynb → Train the product recommendation model
 - firebase_uploader.ipynb → Upload products to Firebase
+  
 Just open and execute each cell in your favorite Jupyter environment.
 
 
