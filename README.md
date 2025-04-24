@@ -95,25 +95,39 @@ Each folder has their own getting started section. So this way we can deploy the
 ---
 
 ## 🚀 Tech Stack
-React Native
 
--Python (FastAPI, Jupyter)
+### 🖥️ Frontend
+- React Native with Expo
+- TailwindCSS for styling
+- React Navigation for routing
+- Node.js (for CLI or scripting needs)
 
--RunPod (for LLMs)
+### 🧠 AI / NLP
+- OpenAI & Hugging Face APIs
+- Custom-trained LLM hosted on RunPod
+- Retrieval-Augmented Generation (RAG)
+- LangChain for orchestration
 
--Firebase (for storage)
+### 🗃️ Data & Storage
+- Pinecone (vector database for semantic search)
+- Firebase (for structured storage and syncing)
+- JSON & CSV datasets (for menu items, training, and user interactions)
 
--FAISS / Pinecone (for vector DB)
+### 🔧 Backend & ML
+- Python (core backend & logic)
+- Jupyter Notebooks (for model training & experimentation)
+- Custom-built agent framework (Guard, Order, Details, Recommendation, Classification)
+- Market Basket Recommendation Engine (scikit-learn, pandas)
 
--scikit-learn / pandas (for recommendation engine)
--LangChain / Transformers (for RAG + LLM integration)
+### ☁️ Infrastructure
+- RunPod (for deploying custom LLMs and backend services)
 
 ---
 
 ## 🔗 Refrence Links
--RunPod: RunPod Official Site - Infrastructure for deploying and scaling machine learning models.
--Kaggle Dataset: Source of the dataset used for training the recommendation engine.
--Figma app design: - The design mockups for the coffee shop app, providing a visual guide for the user interface and experience.
--Hugging Face: Hugging Face Models - Repository for Llama LLms, a state-of-the-art NLP model used in our chatbot.
--Pinecone: Pinecone Documentation - Documentation for the vector database used in the project.
--Firebase: Firebase Documentation - Comprehensive guide for using Firebase to manage app data for the coffee shop app.
+- RunPod: RunPod Official Site - Infrastructure for deploying and scaling machine learning models.
+- Kaggle Dataset: Source of the dataset used for training the recommendation engine.
+- Figma app design: - The design mockups for the coffee shop app, providing a visual guide for the user interface and experience.
+- Hugging Face: Hugging Face Models - Repository for Llama LLms, a state-of-the-art NLP model used in our chatbot.
+- Pinecone: Pinecone Documentation - Documentation for the vector database used in the project.
+- Firebase: Firebase Documentation - Comprehensive guide for using Firebase to manage app data for the coffee shop app.
