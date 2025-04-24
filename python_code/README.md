@@ -66,9 +66,9 @@ You can follow along with my full setup in this YouTube tutorial (📺 *link com
   - A Chatbot endpoint (for LLM inference)
   - An Embedding endpoint (for vector DB)
 - Then add to .env:
-<pre><code>RUNPOD_TOKEN=`<your_runpod_token>`
-RUNPOD_CHATBOT_URL=`<your_chatbot_endpoint>`
-RUNPOD_EMBEDDING_URL=`<your_embedding_endpoint>`
+<pre><code>RUNPOD_TOKEN=&lt;your_runpod_token&gt;
+RUNPOD_CHATBOT_URL=your_chatbot_endpoint
+RUNPOD_EMBEDDING_URL=your_embedding_endpoint
 </code></pre>
 
 ### 5. 🌲 Set Up Pinecone
