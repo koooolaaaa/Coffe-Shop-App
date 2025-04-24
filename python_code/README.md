@@ -67,15 +67,15 @@ You can follow along with my full setup in this YouTube tutorial (📺 *link com
   - An Embedding endpoint (for vector DB)
 - Then add to .env:
 <pre><code>RUNPOD_TOKEN=`<your_runpod_token>`
-  RUNPOD_CHATBOT_URL=`<your_chatbot_endpoint>`
-  RUNPOD_EMBEDDING_URL=`<your_embedding_endpoint>`
+RUNPOD_CHATBOT_URL=`<your_chatbot_endpoint>`
+RUNPOD_EMBEDDING_URL=`<your_embedding_endpoint>`
 </code></pre>
 
 ### 5. 🌲 Set Up Pinecone
 - Sign up: [Pinecone](https://www.pinecone.io/)
 
 - Add to .env:
-<pre><code>PINECONE_API_KEY=`<your_pinecone_api_key>`
+<pre><code>`PINECONE_API_KEY=<your_pinecone_api_key>`
   PINECONE_INDEX_NAME=`<your_index_name>`
 </code></pre>
 
