@@ -57,7 +57,7 @@ You can follow along with my full setup in this YouTube tutorial (📺 *link com
 ### 3. ⚙️ Create .env File
 - Create a .env file in the python_code/ directory and populate it like so:
 <pre><code>MODEL_NAME=meta-llama/Meta-Llama-3-8B-Instruct
-  HUGGINGFACE_TOKEN=`<your_huggingface_token>`
+HUGGINGFACE_TOKEN=&lt;your_huggingface_token&gt;
 </code></pre>
 
 ### 4. 🚀 Set Up RunPod
@@ -67,16 +67,16 @@ You can follow along with my full setup in this YouTube tutorial (📺 *link com
   - An Embedding endpoint (for vector DB)
 - Then add to .env:
 <pre><code>RUNPOD_TOKEN=&lt;your_runpod_token&gt;
-RUNPOD_CHATBOT_URL=your_chatbot_endpoint
-RUNPOD_EMBEDDING_URL=your_embedding_endpoint
+RUNPOD_CHATBOT_URL=&lt;your_chatbot_endpoint&gt;
+RUNPOD_EMBEDDING_URL=&lt;your_embedding_endpoint&gt;
 </code></pre>
 
 ### 5. 🌲 Set Up Pinecone
 - Sign up: [Pinecone](https://www.pinecone.io/)
 
 - Add to .env:
-<pre><code>\`PINECONE_API_KEY=\<your_pinecone_api_key\>\`
-\`PINECONE_INDEX_NAME=\<your_pinecone_index_name\>\`
+<pre><code>PINECONE_API_KEY=&lt;your_pinecone_api_key&gt;
+PINECONE_INDEX_NAME=&lt;your_pinecone_index_name&gt;
 </code></pre>
 
 ### 6. 🔥 Set Up Firebase
