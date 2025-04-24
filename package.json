@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@react-native-firebase/app": "^21.14.0",
-    "@react-native-firebase/firestore": "^21.14.0",
-    "react-native-root-siblings": "^5.0.1",
-    "react-native-root-toast": "^4.0.1"
-  }
-}
