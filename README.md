@@ -74,7 +74,7 @@ The React Native app is the front-end where users interact with the chatbot:
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 <pre><code>├── coffee_shop_customer_service_chatbot
 │   ├── coffee_shop_app_folder # Contains React Native app code   
 │   ├── python_code
@@ -85,3 +85,35 @@ The React Native app is the front-end where users interact with the chatbot:
 │       ├── firebase_uploader.ipynb                 # Uploads products to Firebase    
 │       ├── recommendation_engine_training.ipynb    # Trains recommendation engine 
 </code></pre>
+
+---
+
+## 🚀 Getting Started
+
+Each folder has their own getting started section. So this way we can deploy the front end, backend and setup individually.
+
+---
+
+## 🚀 Tech Stack
+React Native
+
+-Python (FastAPI, Jupyter)
+
+-RunPod (for LLMs)
+
+-Firebase (for storage)
+
+-FAISS / Pinecone (for vector DB)
+
+-scikit-learn / pandas (for recommendation engine)
+-LangChain / Transformers (for RAG + LLM integration)
+
+---
+
+## 🔗 Refrence Links
+-RunPod: RunPod Official Site - Infrastructure for deploying and scaling machine learning models.
+-Kaggle Dataset: Source of the dataset used for training the recommendation engine.
+-Figma app design: - The design mockups for the coffee shop app, providing a visual guide for the user interface and experience.
+-Hugging Face: Hugging Face Models - Repository for Llama LLms, a state-of-the-art NLP model used in our chatbot.
+-Pinecone: Pinecone Documentation - Documentation for the vector database used in the project.
+-Firebase: Firebase Documentation - Comprehensive guide for using Firebase to manage app data for the coffee shop app.
